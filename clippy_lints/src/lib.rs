@@ -278,6 +278,7 @@ pub mod question_mark;
 pub mod ranges;
 pub mod redundant_clone;
 pub mod redundant_field_names;
+pub mod redundant_float_operation;
 pub mod redundant_pattern_matching;
 pub mod redundant_static_lifetimes;
 pub mod reference;
@@ -732,6 +733,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         &ranges::RANGE_ZIP_WITH_LEN,
         &redundant_clone::REDUNDANT_CLONE,
         &redundant_field_names::REDUNDANT_FIELD_NAMES,
+        &redundant_float_operation::REDUNDANT_FLOAT_OPERATION,
         &redundant_pattern_matching::REDUNDANT_PATTERN_MATCHING,
         &redundant_static_lifetimes::REDUNDANT_STATIC_LIFETIMES,
         &reference::DEREF_ADDROF,
@@ -1298,6 +1300,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         LintId::of(&ranges::RANGE_ZIP_WITH_LEN),
         LintId::of(&redundant_clone::REDUNDANT_CLONE),
         LintId::of(&redundant_field_names::REDUNDANT_FIELD_NAMES),
+        LintId::of(&redundant_float_operation::REDUNDANT_FLOAT_OPERATION),
         LintId::of(&redundant_pattern_matching::REDUNDANT_PATTERN_MATCHING),
         LintId::of(&redundant_static_lifetimes::REDUNDANT_STATIC_LIFETIMES),
         LintId::of(&reference::DEREF_ADDROF),
@@ -1518,6 +1521,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         LintId::of(&ptr_offset_with_cast::PTR_OFFSET_WITH_CAST),
         LintId::of(&ranges::RANGE_MINUS_ONE),
         LintId::of(&ranges::RANGE_ZIP_WITH_LEN),
+        LintId::of(&redundant_float_operation::REDUNDANT_FLOAT_OPERATION),
         LintId::of(&reference::DEREF_ADDROF),
         LintId::of(&reference::REF_IN_DEREF),
         LintId::of(&swap::MANUAL_SWAP),

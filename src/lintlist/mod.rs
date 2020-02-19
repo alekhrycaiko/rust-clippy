@@ -6,7 +6,7 @@ pub use lint::Lint;
 pub use lint::LINT_LEVELS;
 
 // begin lint list, do not remove this comment, it’s used in `update_lints`
-pub const ALL_LINTS: [Lint; 354] = [
+pub const ALL_LINTS: [Lint; 355] = [
     Lint {
         name: "absurd_extreme_comparisons",
         group: "correctness",
@@ -1728,6 +1728,13 @@ pub const ALL_LINTS: [Lint; 354] = [
         desc: "checks for fields in struct literals where shorthands could be used",
         deprecation: None,
         module: "redundant_field_names",
+    },
+    Lint {
+        name: "redundant_float_operation",
+        group: "complexity",
+        desc: "default lint description",
+        deprecation: None,
+        module: "redundant_float_operation",
     },
     Lint {
         name: "redundant_pattern",
